@@ -139,11 +139,9 @@
         <section id="projects" class="mb-16 md:mb-24 bg-gray-800 p-8 rounded-lg shadow-xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-400 section-title">Projects</h2>
             <!-- Updated to a 2x2 grid -->
-            
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- Project: Twin Stick Shooter: Battle Mayhem -->
+
+                <!-- Project: Twin Stick Shooter: Battle Mayhem (1st) -->
                 <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
                     <img src="RES/BATTLE MAYHEM POSTER.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FF0000/FFFFFF?text=Battle+Mayhem';" alt="Battle Mayhem Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -160,7 +158,7 @@
                     </div>
                 </div>
 
-                <!-- Updated Project: Mobile Puzzle Game -->
+                <!-- Updated Project: Mobile Puzzle Game (2nd) -->
                 <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
                     <img src="RES/puzz.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/ED8936/FFFFFF?text=Puzzle+Game';" alt="Falling World Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -176,8 +174,8 @@
                         <a href="https://paradisesan.itch.io/falling-world" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View Game on Itch.io</a>
                     </div>
                 </div>
-                
-                <!-- New Project: Dolphin Game -->
+
+                <!-- New Project: Dolphin Game (3rd) -->
                 <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
                     <img src="RES/Dol.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/3498DB/FFFFFF?text=Dolphin+Game';" alt="Dolphin Game Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -190,15 +188,14 @@
                             <li class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full">C#</li>
                             <li class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full">Player Movement</li>
                         </ul>
-                        <div class="flex flex-wrap justify-center gap-2 mt-4">
+                        <div class="flex flex-wrap justify-start gap-2 mt-4">
                             <a href="https://globalgamejam.org/games/2024/untitled-dolphin-game-8-0" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View Executable</a>
                             <a href="https://github.com/HARISH-GOUTHAM/Dolphin-GGJ" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View GitHub Repo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Thesis Project: Procedural City Generation -->
-                
+                <!-- Thesis Project: Procedural City Generation (4th) -->
                 <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
                     <img src="RES/PRO_GEN.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/9B59B6/FFFFFF?text=City+Gen';" alt="Procedural City Generation Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -215,8 +212,6 @@
                     </div>
                 </div>
 
-
-                
             </div>
         </section>
 
@@ -261,11 +256,3 @@
 
 </body>
 </html>
-```
-I've updated the "Contact Me" section to match your desired layout:
-
-* **Two Rows:** The LinkedIn and GitHub buttons are now in their own `div` (`flex flex-wrap justify-center gap-4`).
-* **Centered Email:** The "Email Me" button (with its associated text) is in a separate `contact-button-container` below the first row, also centrally aligned.
-* **Proportion and Spacing:** I've applied `flex-grow` (and `sm:flex-grow-0` for smaller screens) to the LinkedIn and GitHub buttons within their container. This will make them expand to fill available space on smaller screens, while maintaining a more proportional look on larger screens. I've also re-evaluated the `gap` property for consistent spacing.
-
-This structure should achieve the layout you described while keeping the button animations and text wrapping as desir
