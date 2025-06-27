@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goutham's Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
+        }
+        /* Styling for the main resume sections */
+        .resume-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #1f2937; /* gray-800 equivalent */
+            padding: 2rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+        }
+        .resume-h1 {
+            font-size: 2.5rem; /* Equivalent to text-4xl from portfolio */
+            font-weight: 800; /* font-extrabold */
+            margin-bottom: 0.5rem;
+            color: #e2e8f0; /* text-white */
+        }
+        .resume-info-text {
+            font-size: 1.125rem; /* text-lg */
+            color: #d1d5db; /* text-gray-300 */
+            margin-bottom: 0.25rem;
+        }
+        .resume-section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 1rem;
+            font-size: 2.25rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            color: #60a5fa; /* blue-400 */
+        }
+        .resume-section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 3px;
+            background-color: #4299e1; /* Blue underline */
+            border-radius: 9999px;
+        }
+        .resume-hr {
+            border-top: 1px solid #4a5568; /* border-gray-700 */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .resume-experience-title {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            margin-bottom: 0.5rem;
+            color: #e2e8f0; /* text-white */
+        }
+        .resume-experience-subtitle {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 400; /* font-normal */
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .resume-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .resume-list-item {
+            margin-bottom: 0.5rem;
+            color: #cbd5e0; /* text-gray-200 */
+            font-size: 1.125rem; /* text-lg */
+        }
+        .resume-project-link {
+            font-size: 0.875rem; /* text-sm */
+            color: #9ca3af; /* text-gray-400 */
+            margin-top: 0.5rem;
+        }
+        .resume-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .resume-tag {
+            background-color: #6d28d9; /* purple-700 */
+            color: #e2e8f0; /* text-white */
+            font-size: 0.875rem; /* text-sm */
+            padding: 0.25rem 0.75rem; /* px-3 py-1 */
+            border-radius: 9999px; /* rounded-full */
+        }
+        .resume-sub-section-card {
+            background-color: #374151; /* gray-700 */
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.375rem; /* rounded-md */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+        /* Base styles for all interactive buttons for consistent appearance and compact size */
+        .interactive-button {
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem; /* py-2 px-4 */
+            border-radius: 9999px; /* rounded-full */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* font-semibold */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+        }
+        .interactive-button:hover { transform: scale(1.05); } /* Slightly adjusted for buttons on resume page */
+        .interactive-button:active { transform: scale(1.02); }
+
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+    <div class="resume-container">
+        <!-- Back to Portfolio Button -->
+        <a href="index.html" class="inline-flex items-center bg-blue-600 text-white interactive-button mb-8">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></svg>
+            View Portfolio
+        </a>
+
+        <!-- Resume Content - Converted from Markdown to HTML -->
+        <h1 class="resume-h1">CH Goutham Singh</h1>
+        <p class="resume-info-text">Email: gg.gouthamsingh@gmail.com</p>
+        <p class="resume-info-text">LinkedIn: <a href="https://www.linkedin.com/in/gouthamsingh" target="_blank" class="text-blue-400 hover:underline">www.linkedin.com/in/gouthamsingh</a></p>
+        <p class="resume-info-text">GitHub: <a href="https://github.com/GG-goutham" target="_blank" class="text-blue-400 hover:underline">github.com/GG-goutham</a></p>
+        <p class="resume-info-text mb-6">Location: Hyderabad, Telangana, India</p>
+
+        <hr class="resume-hr">
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Summary</h2>
+            <p class="text-lg leading-relaxed">
+                <strong class="text-green-300">Unity & C# Game Developer</strong> building game mechanics and interesting projects that are fun for me. Looking forward to learn from new experience and complex projects.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Experience</h2>
+            <!-- Battle Mayhem -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Developer (Unity / C#)</h3>
+                <p class="resume-experience-subtitle">Battle Mayhem – Twin-Stick Shooter</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Worked on a build system for player-constructed combat vehicles, <strong class="text-green-300">implemented entirely in Unity using C#</strong>.</li>
+                    <li class="resume-list-item">Designed and implemented comprehensive player weapon systems within <strong class="text-green-300">Unity</strong>, significantly enhancing combat mechanics.</li>
+                    <li class="resume-list-item">Built and refined intuitive UI elements for an optimized user experience <strong class="text-green-300">in Unity</strong>.</li>
+                </ul>
+                <p class="resume-project-link"><em>Project Link:</em> <a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" class="text-blue-400 hover:underline">https://unknown-coder.itch.io/battle-mayhem</a></p>
+            </div>
+            <!-- Falling World -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Developer (Unity / C#)</h3>
+                <p class="resume-experience-subtitle">Falling World – Mobile Puzzle Game</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Game Jam project developed as an educational mobile puzzle game, <strong class="text-green-300">built with Unity</strong>.</li>
+                    <li class="resume-list-item">Implemented interactive physics-based elements, domino mechanics, <strong class="text-green-300">within the Unity environment</strong>.</li>
+                </ul>
+                <p class="resume-project-link"><em>Project Link:</em> <a href="https://paradisesan.itch.io/falling-world" target="_blank" class="text-blue-400 hover:underline">https://paradisesan.itch.io/falling-world</a></p>
+            </div>
+            <!-- Untitled-Dolphin-Game -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Developer (Unity / C#)</h3>
+                <p class="resume-experience-subtitle">Untitled-Dolphin-Game (PC)</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Developed core player movement systems for this PC game to control a dolphin.</li>
+                </ul>
+                <p class="resume-project-link"><em>GitHub Repo:</em> <a href="https://github.com/HARISH-GOUTHAM/Dolphin-GGJ" target="_blank" class="text-blue-400 hover:underline">https://github.com/HARISH-GOUTHAM/Dolphin-GGJ</a></p>
+                <p class="resume-project-link"><em>Executable Link:</em> <a href="https://globalgamejam.org/games/2024/untitled-dolphin-game-8-0" target="_blank" class="text-blue-400 hover:underline">https://globalgamejam.org/games/2024/untitled-dolphin-game-8-0</a></p>
+            </div>
+            <!-- Thesis Project -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Thesis Project</h3>
+                <p class="resume-experience-subtitle">Procedural Generation of City Level</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Researched algorithms for procedural road network generation and dynamic building placement.</li>
+                    <li class="resume-list-item">Developed a test algorithm for procedural generation, <strong class="text-green-300">primarily developed in Unity using C#</strong>.</li>
+                </ul>
+                <p class="resume-project-link"><em>Thesis Document:</em> <a href="https://gg-goutham.github.io/Portfolio/RES/Procedural%20Generation%20of%20City%20Level.pdf" target="_blank" class="text-blue-400 hover:underline">View Thesis PDF</a></p>
+            </div>
+            <!-- Game Jams & Personal Projects -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Jams & Personal Projects</h3>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Actively participated in multiple game jams, consistently pushing for fun and engaging projects <strong class="text-green-300">often utilizing Unity 3D</strong>.</li>
+                    <li class="resume-list-item">Engaged in various personal projects, focusing on AI behaviors, procedural generation in various roles, and diverse gameplay mechanics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="resume-card">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Programming Languages</h3>
+                    <ul class="resume-list">
+                        <li>C# (Proficient)</li>
+                        <li>C++ (Familiar)</li>
+                        <li>Python (Basic)</li>
+                        <li>Java (Basic)</li>
+                    </ul>
+                </div>
+                <div class="resume-card">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Game Engines & Tools</h3>
+                    <ul class="resume-list">
+                        <li><strong class="text-green-300">Unity 3D (Intermediate)</strong></li>
+                        <li>Unreal Engine (Familiar)</li>
+                        <li>Blender (Basic 3D Modeling)</li>
+                        <li>Visual Studio</li>
+                    </ul>
+                </div>
+                <div class="resume-card">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Core Game Dev Skills</h3>
+                    <ul class="resume-list">
+                        <li>Game Mechanics Implementation</li>
+                        <li>Systems Design</li>
+                        <li>Performance Optimization</li>
+                        <li>UI/UX Design for Games</li>
+                        <li>Procedural Generation</li>
+                        <li>Brainstorming</li>
+                        <li>Implementation/Optimization Techniques</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Education</h2>
+            <div class="resume-card">
+                <h3 class="resume-experience-title">Backstage Pass Gaming Institute</h3>
+                <p class="text-lg">BSc (Hons) in Computer Science and Game Development (3rd Year, Ongoing)</p>
+                <p class="text-lg">Comprehensive focus on <strong class="text-green-300">Unity game programming</strong> and design principles.</p>
+            </div>
+        </section>
+
+        <!-- Download PDF Button -->
+        <div class="text-center mt-12">
+            <a href="https://gg-goutham.github.io/Portfolio/RES/Goutham%27s%20unity%20developer%20Resume.pdf" target="_blank" class="bg-blue-500 text-white interactive-button hover:scale-110 active:scale-115">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L6.293 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></svg>
+                Download Resume PDF
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+```
+I've acknowledged your request to change "Back to Portfolio" to "View Portfolio" in the `goutham-resume-page` Canvas.
+
+Here's the updated `goutham-resume-page` Canvas:
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goutham's Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
+        }
+        /* Styling for the main resume sections */
+        .resume-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #1f2937; /* gray-800 equivalent */
+            padding: 2rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+        }
+        .resume-h1 {
+            font-size: 2.5rem; /* Equivalent to text-4xl from portfolio */
+            font-weight: 800; /* font-extrabold */
+            margin-bottom: 0.5rem;
+            color: #e2e8f0; /* text-white */
+        }
+        .resume-info-text {
+            font-size: 1.125rem; /* text-lg */
+            color: #d1d5db; /* text-gray-300 */
+            margin-bottom: 0.25rem;
+        }
+        .resume-section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 1rem;
+            font-size: 2.25rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            color: #60a5fa; /* blue-400 */
+        }
+        .resume-section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 3px;
+            background-color: #4299e1; /* Blue underline */
+            border-radius: 9999px;
+        }
+        .resume-hr {
+            border-top: 1px solid #4a5568; /* border-gray-700 */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .resume-experience-title {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            margin-bottom: 0.5rem;
+            color: #e2e8f0; /* text-white */
+        }
+        .resume-experience-subtitle {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 400; /* font-normal */
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .resume-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .resume-list-item {
+            margin-bottom: 0.5rem;
+            color: #cbd5e0; /* text-gray-200 */
+            font-size: 1.125rem; /* text-lg */
+        }
+        .resume-project-link {
+            font-size: 0.875rem; /* text-sm */
+            color: #9ca3af; /* text-gray-400 */
+            margin-top: 0.5rem;
+        }
+        .resume-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .resume-tag {
+            background-color: #6d28d9; /* purple-700 */
+            color: #e2e8f0; /* text-white */
+            font-size: 0.875rem; /* text-sm */
+            padding: 0.25rem 0.75rem; /* px-3 py-1 */
+            border-radius: 9999px; /* rounded-full */
+        }
+        .resume-sub-section-card {
+            background-color: #374151; /* gray-700 */
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.375rem; /* rounded-md */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+        /* Base styles for all interactive buttons for consistent appearance and compact size */
+        .interactive-button {
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem; /* py-2 px-4 */
+            border-radius: 9999px; /* rounded-full */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* font-semibold */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+        }
+        .interactive-button:hover { transform: scale(1.05); } /* Slightly adjusted for buttons on resume page */
+        .interactive-button:active { transform: scale(1.02); }
+
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+    <div class="resume-container">
+        <!-- Back to Portfolio Button -->
+        <a href="index.html" class="inline-flex items-center bg-blue-600 text-white interactive-button mb-8">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H16a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></svg>
+            View Portfolio
+        </a>
+
+        <!-- Resume Content - Converted from Markdown to HTML -->
+        <h1 class="resume-h1">CH Goutham Singh</h1>
+        <p class="resume-info-text">Email: gg.gouthamsingh@gmail.com</p>
+        <p class="resume-info-text">LinkedIn: <a href="https://www.linkedin.com/in/gouthamsingh" target="_blank" class="text-blue-400 hover:underline">www.linkedin.com/in/gouthamsingh</a></p>
+        <p class="resume-info-text">GitHub: <a href="https://github.com/GG-goutham" target="_blank" class="text-blue-400 hover:underline">github.com/GG-goutham</a></p>
+        <p class="resume-info-text mb-6">Location: Hyderabad, Telangana, India</p>
+
+        <hr class="resume-hr">
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Summary</h2>
+            <p class="text-lg leading-relaxed">
+                <strong class="text-green-300">Unity & C# Game Developer</strong> building game mechanics and interesting projects that are fun for me. Looking forward to learn from new experience and complex projects.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Experience</h2>
+            <!-- Battle Mayhem -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Developer (Unity / C#)</h3>
+                <p class="resume-experience-subtitle">Battle Mayhem – Twin-Stick Shooter</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Worked on a build system for player-constructed combat vehicles, <strong class="text-green-300">implemented entirely in Unity using C#</strong>.</li>
+                    <li class="resume-list-item">Designed and implemented comprehensive player weapon systems within <strong class="text-green-300">Unity</strong>, significantly enhancing combat mechanics.</li>
+                    <li class="resume-list-item">Built and refined intuitive UI elements for an optimized user experience <strong class="text-green-300">in Unity</strong>.</li>
+                </ul>
+                <p class="resume-project-link"><em>Project Link:</em> <a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" class="text-blue-400 hover:underline">https://unknown-coder.itch.io/battle-mayhem</a></p>
+            </div>
+            <!-- Falling World -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Developer (Unity / C#)</h3>
+                <p class="resume-experience-subtitle">Falling World – Mobile Puzzle Game</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Game Jam project developed as an educational mobile puzzle game, <strong class="text-green-300">built with Unity</strong>.</li>
+                    <li class="resume-list-item">Implemented interactive physics-based elements, domino mechanics, <strong class="text-green-300">within the Unity environment</strong>.</li>
+                </ul>
+                <p class="resume-project-link"><em>Project Link:</em> <a href="https://paradisesan.itch.io/falling-world" target="_blank" class="text-blue-400 hover:underline">https://paradisesan.itch.io/falling-world</a></p>
+            </div>
+            <!-- Untitled-Dolphin-Game -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Developer (Unity / C#)</h3>
+                <p class="resume-experience-subtitle">Untitled-Dolphin-Game (PC)</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Developed core player movement systems for this PC game to control a dolphin.</li>
+                </ul>
+                <p class="resume-project-link"><em>GitHub Repo:</em> <a href="https://github.com/HARISH-GOUTHAM/Dolphin-GGJ" target="_blank" class="text-blue-400 hover:underline">https://github.com/HARISH-GOUTHAM/Dolphin-GGJ</a></p>
+                <p class="resume-project-link"><em>Executable Link:</em> <a href="https://globalgamejam.org/games/2024/untitled-dolphin-game-8-0" target="_blank" class="text-blue-400 hover:underline">https://globalgamejam.org/games/2024/untitled-dolphin-game-8-0</a></p>
+            </div>
+            <!-- Thesis Project -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Thesis Project</h3>
+                <p class="resume-experience-subtitle">Procedural Generation of City Level</p>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Researched algorithms for procedural road network generation and dynamic building placement.</li>
+                    <li class="resume-list-item">Developed a test algorithm for procedural generation, <strong class="text-green-300">primarily developed in Unity using C#</strong>.</li>
+                </ul>
+                <p class="resume-project-link"><em>Thesis Document:</em> <a href="https://gg-goutham.github.io/Portfolio/RES/Procedural%20Generation%20of%20City%20Level.pdf" target="_blank" class="text-blue-400 hover:underline">View Thesis PDF</a></p>
+            </div>
+            <!-- Game Jams & Personal Projects -->
+            <div class="resume-sub-section-card">
+                <h3 class="resume-experience-title">Game Jams & Personal Projects</h3>
+                <ul class="resume-list">
+                    <li class="resume-list-item">Actively participated in multiple game jams, consistently pushing for fun and engaging projects <strong class="text-green-300">often utilizing Unity 3D</strong>.</li>
+                    <li class="resume-list-item">Engaged in various personal projects, focusing on AI behaviors, procedural generation in various roles, and diverse gameplay mechanics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="resume-card">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Programming Languages</h3>
+                    <ul class="resume-list">
+                        <li>C# (Proficient)</li>
+                        <li>C++ (Familiar)</li>
+                        <li>Python (Basic)</li>
+                        <li>Java (Basic)</li>
+                    </ul>
+                </div>
+                <div class="resume-card">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Game Engines & Tools</h3>
+                    <ul class="resume-list">
+                        <li><strong class="text-green-300">Unity 3D (Intermediate)</strong></li>
+                        <li>Unreal Engine (Familiar)</li>
+                        <li>Blender (Basic 3D Modeling)</li>
+                        <li>Visual Studio</li>
+                    </ul>
+                </div>
+                <div class="resume-card">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Core Game Dev Skills</h3>
+                    <ul class="resume-list">
+                        <li>Game Mechanics Implementation</li>
+                        <li>Systems Design</li>
+                        <li>Performance Optimization</li>
+                        <li>UI/UX Design for Games</li>
+                        <li>Procedural Generation</li>
+                        <li>Brainstorming</li>
+                        <li>Implementation/Optimization Techniques</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="resume-section-title">Education</h2>
+            <div class="resume-card">
+                <h3 class="resume-experience-title">Backstage Pass Gaming Institute</h3>
+                <p class="text-lg">BSc (Hons) in Computer Science and Game Development (3rd Year, Ongoing)</p>
+                <p class="text-lg">Comprehensive focus on <strong class="text-green-300">Unity game programming</strong> and design principles.</p>
+            </div>
+        </section>
+
+        <!-- Download PDF Button -->
+        <div class="text-center mt-12">
+            <a href="https://gg-goutham.github.io/Portfolio/RES/Goutham%27s%20unity%20developer%20Resume.pdf" target="_blank" class="bg-blue-500 text-white interactive-button hover:scale-110 active:scale-115">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L6.293 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></svg>
+                Download Resume PDF
+            </a>
+        </div>
+    </div>
+</body>
+</html>
