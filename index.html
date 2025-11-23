@@ -28,9 +28,21 @@
             background-color: #4299e1; /* Blue underline */
             border-radius: 9999px; /* Fully rounded corners for the underline */
         }
-        /* Subtle transition for background on hover for project cards */
-        .project-card:hover {
+        /* Subtle transition for background on hover for project cards, now acting as buttons */
+        .project-card {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 2px solid transparent;
+        }
+        .project-card:hover, .project-card:focus {
             background-color: #3f4a5c; /* Slightly lighter gray on hover */
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(66, 153, 225, 0.5), 0 4px 6px -2px rgba(66, 153, 225, 0.05); /* Blue shadow */
+            outline: none; /* Remove default focus outline */
+            border-color: #4299e1; /* Blue border on focus/hover */
+        }
+        .project-card:active {
+            transform: scale(1.02);
         }
 
         /* Styles for the contact button container (Email Me) */
@@ -51,9 +63,13 @@
             padding-right: 12px; /* px-3 is 12px */
             padding-top: 8px; /* py-2 is 8px */
             padding-bottom: 8px; /* py-2 is 8px */
+            white-space: nowrap;
         }
 
-        /* Tailwind classes for hover and active states will now apply consistently */
+        /* Modal specific styling for animation */
+        .modal-transition {
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="antialiased leading-relaxed">
@@ -83,7 +99,7 @@
         <section id="about" class="mb-16 md:mb-24 bg-gray-800 p-8 rounded-lg shadow-xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-400 section-title">About Me</h2>
             <p class="text-lg md:text-xl leading-relaxed mb-6">
-                Hello! I'm CHINDALIYA GOUTHAM SINGH, a game developer currently studying Computer Science and Game Development at <span class="font-semibold text-green-300">Backstage Pass Gaming Institute</span> in Hyderabad (3rd year, soon to be 4th).
+                Hello! I'm CHINDALIYA GOUTHAM SINGH, a game developer currently studying Computer Science and Game Development at <span class="font-semibold text-green-300">Backstage Pass Gaming Institute</span> in Hyderabad Final Year.
             </p>
             <p class="text-lg md:text-xl leading-relaxed mb-6">
                 I love building game mechanics and interesting projects are fun for me. My main focus is <span class="font-semibold text-green-300">Unity</span> and <span class="font-semibold text-green-300">C#</span>, and I have a strong interest in <span class="font-semibold text-green-300">procedural generation</span>. I've participated in multiple game jams, constantly pushing my skills.
@@ -142,8 +158,13 @@
             <!-- Updated to a 2x2 grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <!-- Project: Twin Stick Shooter: Battle Mayhem (1st) -->
-                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
+                <!-- Project: Twin Stick Shooter: Battle Mayhem (1st) - Now fully clickable -->
+                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden project-card" 
+                    onclick="openModal('battle-mayhem')" 
+                    tabindex="0" 
+                    role="button" 
+                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { openModal('battle-mayhem'); }"
+                >
                     <img src="RES/BATTLE MAYHEM POSTER.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FF0000/FFFFFF?text=Battle+Mayhem';" alt="Battle Mayhem Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-white">Twin Stick Shooter: Battle Mayhem</h3>
@@ -155,12 +176,16 @@
                             <li class="bg-red-600 text-white text-sm px-3 py-1 rounded-full">C#</li>
                             <li class="bg-red-600 text-white text-sm px-3 py-1 rounded-full">Modular Systems</li>
                         </ul>
-                        <a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View Game on Itch.io</a>
                     </div>
                 </div>
 
-                <!-- Updated Project: Mobile Puzzle Game (2nd) -->
-                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
+                <!-- Updated Project: Mobile Puzzle Game (2nd) - Now fully clickable -->
+                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden project-card"
+                    onclick="openModal('falling-world')"
+                    tabindex="0" 
+                    role="button" 
+                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { openModal('falling-world'); }"
+                >
                     <img src="RES/puzz.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/ED8936/FFFFFF?text=Puzzle+Game';" alt="Falling World Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-white">Falling World (Mobile Puzzle Game)</h3>
@@ -172,12 +197,16 @@
                             <li class="bg-orange-600 text-white text-sm px-3 py-1 rounded-full">C#</li>
                             <li class="bg-orange-600 text-white text-sm px-3 py-1 rounded-full">Mobile GameDev</li>
                         </ul>
-                        <a href="https://paradisesan.itch.io/falling-world" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View Game on Itch.io</a>
                     </div>
                 </div>
 
-                <!-- New Project: Dolphin Game (3rd) -->
-                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
+                <!-- New Project: Dolphin Game (3rd) - Now fully clickable -->
+                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden project-card"
+                    onclick="openModal('dolphin-game')"
+                    tabindex="0" 
+                    role="button" 
+                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { openModal('dolphin-game'); }"
+                >
                     <img src="RES/Dol.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/3498DB/FFFFFF?text=Dolphin+Game';" alt="Dolphin Game Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-white">Dolphin Game (PC)</h3>
@@ -189,15 +218,16 @@
                             <li class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full">C#</li>
                             <li class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full">Player Movement</li>
                         </ul>
-                        <div class="flex flex-wrap justify-start gap-2 mt-4">
-                            <a href="https://globalgamejam.org/games/2024/untitled-dolphin-game-8-0" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View Executable</a>
-                            <a href="https://github.com/HARISH-GOUTHAM/Dolphin-GGJ" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View GitHub Repo</a>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Thesis Project: Procedural City Generation (4th) -->
-                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 project-card">
+                <!-- Thesis Project: Procedural City Generation (4th) - Now fully clickable -->
+                <div class="bg-gray-700 rounded-lg shadow-lg overflow-hidden project-card"
+                    onclick="openModal('city-gen')"
+                    tabindex="0" 
+                    role="button" 
+                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { openModal('city-gen'); }"
+                >
                     <img src="RES/PRO_GEN.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/9B59B6/FFFFFF?text=City+Gen';" alt="Procedural City Generation Thumbnail" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-white">Thesis: Procedural City Generation</h3>
@@ -209,7 +239,6 @@
                             <li class="bg-purple-600 text-white text-sm px-3 py-1 rounded-full">C#</li>
                             <li class="bg-purple-600 text-white text-sm px-3 py-1 rounded-full">Procedural Generation</li>
                         </ul>
-                        <a href="RES/Procedural Generation of City Level.pdf" target="_blank" class="bg-blue-500 text-white rounded-full shadow-md interactive-button hover:scale-110 active:scale-115">View Thesis Document</a>
                     </div>
                 </div>
 
@@ -254,6 +283,183 @@
     <footer class="bg-gray-900 text-gray-500 py-8 text-center text-sm rounded-t-lg">
         <p>&copy; 2025 CH Goutham. All rights reserved.</p>
     </footer>
+
+    <!-- Project Detail Modal (Hidden by default) -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" style="background-color: rgba(0, 0, 0, 0.9);">
+        
+        <div class="bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative modal-transition scale-95 opacity-0" id="modal-content">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition duration-200 z-10 p-2 bg-gray-800 rounded-full">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Modal Content Area -->
+            <div class="p-8">
+                <!-- MODIFIED: Changed h-64 to h-48 to match card size -->
+                <img id="modal-image" class="w-full h-48 object-cover rounded-lg mb-6 shadow-xl" src="" onerror="this.src='https://placehold.co/800x400/444444/FFFFFF?text=Image+Unavailable';" alt="Project Image Placeholder">
+                
+                <h3 id="modal-title" class="text-3xl font-bold text-blue-400 mb-2"></h3>
+                
+                <div id="modal-tags" class="flex flex-wrap gap-2 mb-6"></div>
+
+                <!-- Overview -->
+                <div class="mb-6">
+                    <h4 class="text-xl font-semibold text-white mb-2 border-b border-gray-700 pb-1">Overview</h4>
+                    <p id="modal-overview" class="text-gray-300 leading-relaxed"></p>
+                </div>
+
+                <!-- My Work -->
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold text-white mb-2 border-b border-gray-700 pb-1">My Contribution</h4>
+                    <p id="modal-my-work" class="text-gray-300 leading-relaxed"></p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-1">Links</h4>
+                    <div id="modal-links" class="flex flex-col sm:flex-row gap-4">
+                        <!-- Links will be populated here -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Data structure for the projects with detailed information
+        const projectsData = {
+            'battle-mayhem': {
+                title: 'Twin Stick Shooter: Battle Mayhem',
+                image: 'RES/BATTLE MAYHEM POSTER.png', // Using RES path here
+                overview: 'A fast-paced twin-stick shooter where modularity and build systems are key components of the gameplay loop. The game focuses on intense combat and player customization.',
+                myWork: 'Designed and implemented a fully modular weapon system in C#, allowing for dynamic combination of parts. Established the build system.',
+                tags: [
+                    { name: 'Unity', color: 'bg-red-600' },
+                    { name: 'C#', color: 'bg-red-600' },
+                    { name: 'Modular Systems', color: 'bg-red-600' },
+                    { name: 'Game Jam', color: 'bg-yellow-600' }
+                ],
+                links: [
+                    { name: 'Play Game (Itch.io)', url: 'https://unknown-coder.itch.io/battle-mayhem', color: 'bg-blue-600' },
+                ]
+            },
+            'falling-world': {
+                title: 'Falling World (Mobile Puzzle Game)',
+                image: 'RES/puzz.png', // Using RES path here
+                overview: 'An educational, physics-based puzzle game for mobile platforms. The objective is to guide objects to a target area by manipulating the environment and using interactive physics props like dominoes and levers.',
+                myWork: 'Lead implementation of the 3D physics interaction logic for object manipulation. Optimized the game for mobile touch input and handled all UI/UX development for the mobile environment.',
+                tags: [
+                    { name: 'Unity', color: 'bg-orange-600' },
+                    { name: 'C#', color: 'bg-orange-600' },
+                    { name: 'Mobile GameDev', color: 'bg-orange-600' },
+                    { name: '2D Physics', color: 'bg-green-600' }
+                ],
+                links: [
+                    { name: 'View Game (Itch.io)', url: 'https://paradisesan.itch.io/falling-world', color: 'bg-blue-600' },
+                ]
+            },
+            'dolphin-game': {
+                title: 'Dolphin Game (PC)',
+                image: 'RES/Dol.png', // Using RES path here
+                overview: 'A Global Game Jam project centered around controlling a dolphin. The game requires smooth, non-linear movement in a 3D underwater environment, creating a relaxing and fluid experience.',
+                myWork: 'Developed the primary player controller, focusing on advanced C# scripting to achieve fluid, 6-degrees-of-freedom dolphin movement that simulates swimming.',
+                tags: [
+                    { name: 'Unity', color: 'bg-blue-600' },
+                    { name: 'C#', color: 'bg-blue-600' },
+                    { name: '3D Movement', color: 'bg-blue-600' },
+                    { name: 'Global Game Jam', color: 'bg-yellow-600' }
+                ],
+                links: [
+                    { name: 'View Executable', url: 'https://globalgamejam.org/games/2024/untitled-dolphin-game-8-0', color: 'bg-blue-600' },
+                    { name: 'View GitHub Repo', url: 'https://github.com/HARISH-GOUTHAM/Dolphin-GGJ', color: 'bg-gray-700' }
+                ]
+            },
+            'city-gen': {
+                title: 'Thesis: Procedural City Generation',
+                image: 'RES/PRO_GEN.png', // Using RES path here
+                overview: 'My academic thesis project focused on creating  procedural generation algorithms for urban environments, including road networks, zoning, and building density.',
+                myWork: 'Wrote the core algorithms for road network generation using L-systems, Noise Functions, Wave Function Collapse,. Documented the entire process and performance metrics.',
+                tags: [
+                    { name: 'Unity 3D', color: 'bg-purple-600' },
+                    { name: 'C#', color: 'bg-purple-600' },
+                    { name: 'Procedural Generation', color: 'bg-purple-600' },
+                    { name: 'Thesis', color: 'bg-red-700' }
+                ],
+                links: [
+                    { name: 'View Thesis Document', url: 'RES/Procedural Generation of City Level.pdf', color: 'bg-blue-600' },
+                ]
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        /**
+         * Opens the modal with details corresponding to the project ID.
+         * @param {string} projectId - The key in the projectsData object.
+         */
+        function openModal(projectId) {
+            const data = projectsData[projectId];
+            if (!data) return;
+
+            // Populate static content
+            document.getElementById('modal-title').textContent = data.title;
+            
+            // Use fallback image if RES link fails (due to canvas environment)
+            const imgElement = document.getElementById('modal-image');
+            imgElement.src = data.image; 
+            // imgElement.onerror is handled by the inline attribute now for better robustness
+
+            document.getElementById('modal-overview').textContent = data.overview;
+            document.getElementById('modal-my-work').textContent = data.myWork;
+
+            // Populate tags
+            const tagsContainer = document.getElementById('modal-tags');
+            tagsContainer.innerHTML = data.tags.map(tag =>
+                `<span class="px-3 py-1 text-sm font-semibold ${tag.color} text-white rounded-full">${tag.name}</span>`
+            ).join('');
+
+            // Populate links
+            const linksContainer = document.getElementById('modal-links');
+            linksContainer.innerHTML = data.links.map(link =>
+                `<a href="${link.url}" target="_blank" class="flex-grow text-center px-6 py-3 ${link.color} text-white font-semibold rounded-full hover:opacity-90 transition duration-300 interactive-button">${link.name}</a>`
+            ).join('');
+
+            // Show and animate the modal
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+
+            // Close modal when clicking outside
+            modal.onclick = (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            };
+        }
+
+        /**
+         * Closes the project detail modal.
+         */
+        function closeModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+
+            // Wait for transition to complete before hiding
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300);
+        }
+        
+    </script>
 
 </body>
 </html>
